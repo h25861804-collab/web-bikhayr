@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIKHAYR – Kuliner Halal & Berkah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=DM+Sans:wght@300;400;500;600&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" onclick="showPage('home')">
+      <div class="nav-logo-icon">بـ</div>
+      <div>
+        <span class="nav-logo-text">BIKHAYR</span>
+        <span class="nav-logo-sub">Halal & Berkah</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <button class="nav-link active" onclick="showPage('home')">Beranda</button>
+      <button class="nav-link" onclick="showPage('menu')">Menu</button>
+      <button class="nav-link" onclick="showPage('about')">Tentang Kami</button>
+      <button class="nav-link" onclick="showPage('contact')">Kontak</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="nav-cart-btn" onclick="showPage('cart')">
+        <i class="fas fa-shopping-basket"></i>
+        <span>Keranjang</span>
+        <div class="cart-badge" id="cartBadge">0</div>
+      </button>
+      <div class="hamburger" onclick="toggleMobileMenu()" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-nav-link active" onclick="showPage('home');toggleMobileMenu()">🏠 Beranda</button>
+  <button class="mobile-nav-link" onclick="showPage('menu');toggleMobileMenu()">🍽️ Menu</button>
+  <button class="mobile-nav-link" onclick="showPage('cart');toggleMobileMenu()">🛒 Keranjang</button>
+  <button class="mobile-nav-link" onclick="showPage('about');toggleMobileMenu()">ℹ️ Tentang Kami</button>
+  <button class="mobile-nav-link" onclick="showPage('contact');toggleMobileMenu()">📍 Kontak & Lokasi</button>
+</div>
+
+<!-- ════════════════════ PAGE: HOME ════════════════════ -->
+<div class="page active" id="page-home">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-pattern"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <i class="fas fa-star" style="font-size:10px"></i>
+          Halal · Tayyib · Berkah
+        </div>
+        <h1 class="hero-title">
+          Nikmati Kelezatan<br>
+          <span class="highlight">Terbaik & Berkah</span><br>
+          dari BIKHAYR
+        </h1>
+        <p class="hero-sub">
+          Kuliner premium dengan bahan-bahan pilihan yang halal, higienis, dan penuh cita rasa autentik yang menggugah selera.
+        </p>
+        <div class="hero-cta">
+          <button class="btn-primary" onclick="showPage('menu')">
+            <i class="fas fa-utensils"></i> Pesan Sekarang
+          </button>
+          <button class="btn-outline" onclick="showPage('about')">
+            <i class="fas fa-info-circle"></i> Tentang Kami
+          </button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Halal Certified</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">500+</div>
+            <div class="stat-label">Pelanggan Puas</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">4.9★</div>
+            <div class="stat-label">Rating Kepuasan</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-food-card">
+          <div class="hfc-img"><img src="kebab beranda.jpg" alt="Kebab Daging Sapi" /></div>
+          <div class="hfc-title">Kebab Daging Sapi</div>
+          <div class="hfc-price">Rp 28.000</div>
+        </div>
+        <div class="hero-food-card" style="margin-right:40px">
+          <div class="hfc-img"><img src="burger beranda.jpg" alt="Beef Burger Premium" /></div>
+          <div class="hfc-title">Beef Burger Premium</div>
+          <div class="hfc-price">Rp 35.000</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEUNGGULAN -->
+  <div class="section">
+    <div class="section-tag">Mengapa BIKHAYR?</div>
+    <h2 class="section-title">Keunggulan Kami</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Kami berkomitmen menghadirkan pengalaman kuliner terbaik dengan standar halal yang tidak pernah kami kompromikan.</p>
+    <div class="features-grid">
+      <div class="feat-card">
+        <div class="feat-icon">🥩</div>
+        <h3 class="feat-title">Bahan Halal & Tayyib</h3>
+        <p class="feat-desc">Seluruh bahan baku kami bersertifikat halal, segar dipilih setiap hari, bebas dari bahan-bahan yang diharamkan dan berbahaya.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">👨‍🍳</div>
+        <h3 class="feat-title">Rasa Autentik</h3>
+        <p class="feat-desc">Resep asli dengan bumbu pilihan yang menghadirkan cita rasa khas yang tidak akan Anda temukan di tempat lain.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">⚡</div>
+        <h3 class="feat-title">Pelayanan Cepat</h3>
+        <p class="feat-desc">Pesanan diproses dengan cepat dan tepat. Konfirmasi via WhatsApp langsung, pengiriman ke lokasi Anda.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- HALAL STRIP -->
+  <div class="halal-strip">
+    <div class="halal-strip-inner">
+      <div class="halal-text">بِخَيْر — Dengan Kebaikan</div>
+      <p class="halal-sub">Setiap suapan membawa kebaikan — halal, higienis, dan penuh keberkahan untuk Anda dan keluarga tercinta.</p>
+    </div>
+  </div>
+
+  <!-- FEATURED MENU -->
+  <div class="section">
+    <div class="section-tag">Menu Favorit</div>
+    <h2 class="section-title">Pilihan Terpopuler</h2>
+    <div class="divider"></div>
+    <div class="menu-grid" id="featuredMenu"></div>
+    <div style="text-align:center;margin-top:40px">
+      <button class="btn-primary" onclick="showPage('menu')">
+        <i class="fas fa-th-large"></i> Lihat Semua Menu
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ PAGE: MENU ════════════════════ -->
+<div class="page" id="page-menu">
+  <div class="section">
+    <div class="section-tag">Daftar Makanan</div>
+    <h2 class="section-title">Menu BIKHAYR</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Semua menu diolah dengan bahan halal pilihan dan bumbu autentik yang menggugah selera.</p>
+    <div class="menu-tabs" id="menuTabs">
+      <button class="menu-tab active" onclick="filterMenu('all', this)">Semua</button>
+      <button class="menu-tab" onclick="filterMenu('kebab', this)">🌯 Kebab</button>
+      <button class="menu-tab" onclick="filterMenu('burger', this)">🍔 Burger</button>
+      <button class="menu-tab" onclick="filterMenu('chicken-burger', this)">🍗 Chicken Burger</button>
+      <button class="menu-tab" onclick="filterMenu('sandwich', this)">🥪 Chicken Sandwich</button>
+    </div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </div>
+</div>
+
+<!-- ════════════════════ PAGE: CART ════════════════════ -->
+<div class="page" id="page-cart">
+  <div class="section">
+    <div class="section-tag">Belanja Anda</div>
+    <h2 class="section-title">Keranjang Pesanan</h2>
+    <div class="divider"></div>
+    <div class="cart-layout">
+      <!-- Left: Items -->
+      <div class="cart-items-section">
+        <div class="cart-panel">
+          <div class="cart-panel-title">
+            <i class="fas fa-shopping-basket" style="color:var(--gold)"></i>
+            Item Pesanan
+          </div>
+          <div id="cartItemsList"></div>
+          <div id="cartEmptyMsg" style="display:none">
+            <div class="cart-empty">
+              <i class="fas fa-shopping-basket"></i>
+              <h3>Keranjang Masih Kosong</h3>
+              <p>Yuk, tambahkan menu favoritmu!</p>
+              <button class="btn-primary" style="margin-top:20px" onclick="showPage('menu')">
+                <i class="fas fa-utensils"></i> Lihat Menu
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart-panel" style="margin-top:24px" id="cartSummaryPanel">
+          <div class="cart-panel-title">
+            <i class="fas fa-receipt" style="color:var(--gold)"></i>
+            Ringkasan Pesanan
+          </div>
+          <div class="cart-total-row">
+            <span>Subtotal</span>
+            <span id="summarySubtotal">Rp 0</span>
+          </div>
+          <div class="cart-total-row">
+            <span>Biaya Layanan</span>
+            <span>Gratis 🎉</span>
+          </div>
+          <div class="cart-total-row total">
+            <span>Total</span>
+            <span class="total-price" id="summaryTotal">Rp 0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div>
+        <div class="cart-panel">
+          <div class="cart-panel-title">
+            <i class="fas fa-user" style="color:var(--gold)"></i>
+            Data Pengiriman
+          </div>
+          <div class="form-group">
+            <label class="form-label">Nama Lengkap *</label>
+            <input class="form-input" type="text" id="buyerName" placeholder="Contoh: Ahmad Fauzi" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Alamat Pengiriman *</label>
+            <textarea class="form-textarea" id="buyerAddress" placeholder="Contoh: Jl. Mawar No. 12, Banda Aceh (patokan: dekat Masjid …)"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Catatan Pesanan</label>
+            <textarea class="form-textarea" id="buyerNote" placeholder="Contoh: tanpa tomat, ekstra pedas, saus terpisah…"></textarea>
+          </div>
+          <button class="btn-wa" id="btnWA" onclick="sendWhatsApp()">
+            <i class="fab fa-whatsapp" style="font-size:20px"></i>
+            Konfirmasi Pesanan via WhatsApp
+          </button>
+          <p style="font-size:11px;color:var(--text-light);text-align:center;margin-top:10px">
+            <i class="fas fa-lock"></i> Pesanan Anda akan dikirim langsung ke WhatsApp BIKHAYR
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ PAGE: ABOUT ════════════════════ -->
+<div class="page" id="page-about">
+  <div class="section">
+    <div class="about-layout">
+      <div class="about-visual">
+        <div class="about-main-img"><img src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?auto=format&fit=crop&w=1200&q=80" alt="Masakan BIKHAYR" /></div>
+        <div class="about-float-card">
+          <div class="afc-num">2021</div>
+          <div class="afc-label">Berdiri Sejak</div>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="section-tag">Kisah Kami</div>
+        <h2 class="section-title">Tentang BIKHAYR</h2>
+        <div class="divider"></div>
+        <p style="font-size:15px;color:var(--text-mid);line-height:1.8;margin-bottom:24px">
+          <strong>BIKHAYR</strong> — dari kata <em>Arabik</em> yang bermakna "dengan kebaikan" — lahir dari tekad sederhana: menyajikan makanan yang tidak sekadar lezat, tetapi juga halal, higienis, dan membawa manfaat bagi siapa saja yang menikmatinya.
+        </p>
+        <p style="font-size:15px;color:var(--text-mid);line-height:1.8">
+          Kami percaya bahwa makanan yang baik dimulai dari niat yang baik. Setiap kebab, burger, dan sandwich yang kami sajikan melewati seleksi bahan ketat, diolah dengan tangan-tangan penuh kehati-hatian, untuk memastikan setiap gigitan memberi kepuasan dan ketenangan bagi Anda.
+        </p>
+        <div class="about-values">
+          <div class="value-item">
+            <div class="value-icon">✅</div>
+            <div class="value-text">
+              <h4>Komitmen Halal</h4>
+              <p>Seluruh bahan baku bersertifikat halal, tanpa terkecuali. Ini bukan sekadar label — ini janji kami.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🌿</div>
+            <div class="value-text">
+              <h4>Bahan Segar & Higienis</h4>
+              <p>Kami memilih bahan segar setiap hari dan menjaga standar kebersihan dapur kami setara restoran bintang.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">❤️</div>
+            <div class="value-text">
+              <h4>Pelayanan dari Hati</h4>
+              <p>Setiap pesanan kami proses dengan sepenuh hati, karena kepuasan Anda adalah kebanggaan kami.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🌍</div>
+            <div class="value-text">
+              <h4>Universal & Inklusif</h4>
+              <p>BIKHAYR terbuka untuk semua kalangan — kuliner halal yang bisa dinikmati siapa saja, kapan saja.</p>
+            </div>
+          </div>
+        </div>
+        <div class="team-quote">
+          <p>"Kami tidak hanya menjual makanan. Kami membagikan kebaikan dalam setiap porsi."</p>
+          <cite>— Tim BIKHAYR</cite>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Halal strip -->
+  <div class="halal-strip" style="margin-top:0">
+    <div class="halal-strip-inner">
+      <div class="halal-text">طَيِّبًا حَلَالًا</div>
+      <p class="halal-sub">Halal lagi Baik — itulah standar yang tidak pernah kami turunkan.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ PAGE: CONTACT ════════════════════ -->
+<div class="page" id="page-contact">
+  <div class="section">
+    <div class="section-tag">Hubungi Kami</div>
+    <h2 class="section-title">Kontak & Lokasi</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Kami siap melayani Anda dengan sepenuh hati. Jangan ragu untuk menghubungi kami!</p>
+    <div class="contact-grid">
+      <!-- Info Kontak -->
+      <div class="contact-card">
+        <h3 class="contact-card-title"><i class="fas fa-map-marker-alt" style="color:var(--gold)"></i> Informasi Kontak</h3>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="contact-item-text">
+            <h4>Alamat</h4>
+            <p>Jl. Nasional, Meulaboh, Aceh, Indonesia</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="contact-item-text">
+            <h4>WhatsApp</h4>
+            <p><a href="https://wa.me/6282282257018" target="_blank">+62 822-8225-7018</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+          <div class="contact-item-text">
+            <h4>Telepon</h4>
+            <p><a href="tel:+6282282257018">+62 822-8225-7018</a></p>
+          </div>
+        </div>
+
+        <h4 style="font-size:14px;font-weight:700;color:var(--green-dark);margin:24px 0 12px">Ikuti Kami di Media Sosial</h4>
+        <div class="sosmed-links">
+          <a href="#" class="sosmed-link sosmed-ig"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="https://wa.me/6282282257018" class="sosmed-link sosmed-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="#" class="sosmed-link sosmed-tt"><i class="fab fa-tiktok"></i> TikTok</a>
+        </div>
+      </div>
+
+      <!-- Jam Operasional -->
+      <div class="contact-card">
+        <h3 class="contact-card-title"><i class="fas fa-clock" style="color:var(--gold)"></i> Jam Operasional</h3>
+        <div class="hours-grid">
+          <div class="hour-item"><span class="hour-day">Senin</span><span class="hour-time">10.00 – 22.00</span></div>
+          <div class="hour-item"><span class="hour-day">Selasa</span><span class="hour-time">10.00 – 22.00</span></div>
+          <div class="hour-item"><span class="hour-day">Rabu</span><span class="hour-time">10.00 – 22.00</span></div>
+          <div class="hour-item"><span class="hour-day">Kamis</span><span class="hour-time">10.00 – 22.00</span></div>
+          <div class="hour-item"><span class="hour-day">Jumat</span><span class="hour-time">14.00 – 22.00</span></div>
+          <div class="hour-item"><span class="hour-day">Sabtu</span><span class="hour-time">10.00 – 23.00</span></div>
+          <div class="hour-item"><span class="hour-day">Minggu</span><span class="hour-time">10.00 – 23.00</span></div>
+        </div>
+        <div style="margin-top:24px;padding:16px;background:rgba(200,150,12,.08);border-radius:12px;border:1px solid rgba(200,150,12,.2)">
+          <p style="font-size:13px;color:var(--text-mid);line-height:1.6">
+            <i class="fas fa-info-circle" style="color:var(--gold);margin-right:6px"></i>
+            <strong>Catatan:</strong> Jam Jumat dibuka setelah Shalat Jum'at. Pada hari-hari libur nasional, jam buka dapat berubah — pantau media sosial kami untuk info terbaru.
+          </p>
+        </div>
+
+        <!-- Quick WA CTA -->
+        <div style="margin-top:28px;text-align:center">
+          <p style="font-size:14px;color:var(--text-mid);margin-bottom:14px">Ada pertanyaan? Hubungi kami langsung:</p>
+          <a href="https://wa.me/6282282257018?text=Assalamualaikum%20BIKHAYR%2C%20saya%20ingin%20bertanya..." target="_blank" class="btn-wa" style="display:inline-flex;text-decoration:none;width:auto;padding:12px 24px">
+            <i class="fab fa-whatsapp" style="font-size:18px"></i> Chat via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">BIKHAYR</div>
+        <p class="footer-tagline">Kuliner halal, higienis, dan berkah yang hadir untuk memenuhi kebutuhan kuliner Anda dengan cita rasa autentik dan pelayanan terbaik.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigasi</div>
+        <ul class="footer-links">
+          <li><a onclick="showPage('home')">Beranda</a></li>
+          <li><a onclick="showPage('menu')">Menu</a></li>
+          <li><a onclick="showPage('cart')">Keranjang</a></li>
+          <li><a onclick="showPage('about')">Tentang Kami</a></li>
+          <li><a onclick="showPage('contact')">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Kontak</div>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/6282282257018" target="_blank">📱 +62 822-8225-7018</a></li>
+          <li><a href="#">📍 Meulaboh, Aceh</a></li>
+          <li><a href="#">🕙 Setiap Hari 10.00–22.00</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 BIKHAYR. All rights reserved. Halal & Berkah 🌿</span>
+      <span style="color:rgba(255,255,255,.4);font-size:12px">بِخَيْر — Dengan Kebaikan</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <i class="fas fa-check-circle"></i>
+  <span id="toastMsg">Item ditambahkan!</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
